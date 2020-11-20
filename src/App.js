@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import "./App.css";
-import Bucket from "./components/Bucket";
+import Header from "./components/Header";
+import Products from "./components/Products";
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart((prevCartItems) => [...prevCartItems, product]);
+  };
 
   return (
     <div className="app">
-      {/* <button onClick={() => setCounter((prevCounter) => prevCounter - 1)}>
-        -
-      </button>
-      <h1>{counter}</h1>
-      <button onClick={() => setCounter((prevCounter) => prevCounter + 1)}>
-        +
-      </button> */}
-      <Bucket />
+      <Header cart={cart} />
+      <Products addToCart={addToCart} />
     </div>
   );
 }

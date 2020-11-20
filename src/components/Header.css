@@ -1,0 +1,32 @@
+.header {
+  position: sticky;
+  background-color: #f90643;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.cart {
+  position: relative;
+}
+
+.MuiSvgIcon-root {
+  color: #fff !important;
+}
+
+.badge {
+  padding: 2px 3px;
+  border-radius: 3px;
+  background-color: #f9bc06;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
